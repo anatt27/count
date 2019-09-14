@@ -90,11 +90,13 @@
      </nav>
     </div>
     
-    <div class ="counter container">
-        <button id="myBtn" class="btns" >Counto10</button>
-        <p id="demo"></p>
-           
-    </div>
+    <div id ="counter container">
+  
+      <button onclick="myFunction()">CountTo10</button>
+      <p id="demo"></p>
+         
+    
+     </div>
        
       
    
@@ -117,20 +119,25 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
     
-      <script>
-      document.getElementById("myBtn").onclick = function() {coolDown()};
-      
+    <script>
+
+    function myFunction() {
       var counter = 0;
       var coolDown = setInterval(function(){
-        document.getElementById("demo").innerHTML = counter;
+        $("#demo").html(counter);
         counter++
         if (counter === 12) {
-          document.getElementById("demo").innerHTML = "You did it! Cool!";
-          clearInterval(coolDown);
+        $("#demo").html("You did it! Cool!");
+        clearInterval(coolDown);
         }
-      }, 1000);
+          }, 1000);
+        
+        
+        }
+        
+        </script>
+
       
-      
-      </script>
+
   </body>
 </html>
